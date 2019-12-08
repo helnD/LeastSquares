@@ -13,6 +13,11 @@ namespace Domain.LES
             new ExperimentalData(0, 0)
         };
 
+        public LesBuilder(List<ExperimentalData> data)
+        {
+            Data(data);
+        }
+
         public LesBuilder NumberOfParameters(int number)
         {
             _numberOfParameters = number;

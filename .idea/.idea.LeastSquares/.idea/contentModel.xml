@@ -13,8 +13,12 @@
       <e p="Domain" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Domain.csproj" t="IncludeRecursive" />
-        <e p="ExperimentalData.cs" t="Include" />
         <e p="Function" t="Include">
+          <e p="Dots" t="Include">
+            <e p="ExperimentalData.cs" t="Include" />
+            <e p="IDot.cs" t="Include" />
+            <e p="SimpleDot.cs" t="Include" />
+          </e>
           <e p="Function.cs" t="Include" />
           <e p="FunctionView" t="Include">
             <e p="AnalyticalView" t="Include">
@@ -23,8 +27,6 @@
             </e>
             <e p="IViewBuilder.cs" t="Include" />
             <e p="RelativeView" t="Include">
-              <e p="DotsList.cs" t="Include" />
-              <e p="ExperimentalDotsList.cs" t="Include" />
               <e p="RelativeView.cs" t="Include" />
               <e p="RelativeViewBuilder.cs" t="Include" />
             </e>
@@ -32,7 +34,6 @@
           </e>
           <e p="Parameters.cs" t="Include" />
         </e>
-        <e p="IDot.cs" t="Include" />
         <e p="LES" t="Include">
           <e p="EquationResult.cs" t="Include" />
           <e p="LesBuilder.cs" t="Include" />
@@ -48,7 +49,6 @@
             </e>
           </e>
         </e>
-        <e p="SimpleDot.cs" t="Include" />
       </e>
       <e p="LeastSquares.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
