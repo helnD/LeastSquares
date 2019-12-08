@@ -1,14 +1,14 @@
-﻿namespace Domain.Function.FunctionView.RelativeView
+﻿using System.Collections.Generic;
+
+namespace Domain.Function.FunctionView.RelativeView
 {
     public class RelativeView : View
     {
-        public RelativeView(DotsList dots, ExperimentalDotsList experimentalDots)
+        public RelativeView(List<SimpleDot> dots)
         {
             Dots = dots;
-            ExperimentalDots = experimentalDots;
         }
 
-        public DotsList Dots { get; }
-        public ExperimentalDotsList ExperimentalDots { get; }
+        public List<SimpleDot> Dots { get; } 
     }
 }

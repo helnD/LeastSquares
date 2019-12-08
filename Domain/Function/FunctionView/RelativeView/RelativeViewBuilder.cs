@@ -1,19 +1,18 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Domain.Function.FunctionView.RelativeView
 {
     public class RelativeViewBuilder : IViewBuilder
     {
         private readonly Function _function;
-        private readonly ExperimentalDotsList _experimental;
         private float _numberOfParts = 50;
         private float _start = 0;
         private float _end = 100;
 
-        public RelativeViewBuilder(Function function, List<ExperimentalData> experimental)
+        public RelativeViewBuilder(Function function)
         {
             _function = function;
-            _experimental = new ExperimentalDotsList(experimental);
         }
 
         public RelativeViewBuilder NumberOfParts(float number)
@@ -45,7 +44,7 @@ namespace Domain.Function.FunctionView.RelativeView
                 simpleDots.Add(new SimpleDot(x, y));
             }
             
-            return new RelativeView(new DotsList(simpleDots), _experimental);
+            return new RelativeView(simpleDots);
         }
     }
 }

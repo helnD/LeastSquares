@@ -14,31 +14,7 @@ namespace Domain.Function.FunctionView.AnalyticalView
             _function = function;
         }
 
-        public View Build()
-        {
-            var viewBuilder = new StringBuilder();
-
-            for (var i = 0; i < _function.Parameters.Count; i++)
-            {
-                if (Math.Abs(_function.Parameters[i]) < 0.0001) continue;
-
-                var coefficient = Math.Abs(_function.Parameters[i] - 1) > 0.0001 ? _function.Parameters[i].ToString(CultureInfo.InvariantCulture) : "";
-                
-                switch (i)
-                {
-                    case 0:
-                        viewBuilder.Append(coefficient);
-                        break;
-                    case 1:
-                        viewBuilder.Append(coefficient + "x");
-                        break;
-                    default:
-                        viewBuilder.Append(coefficient + "x^" + i);
-                        break;
-                }
-            }
-
-            return new AnalyticalView(viewBuilder.ToString());
-        }
+        public View Build() =>
+            new AnalyticalView(_function.Parameters.ToFloatList());
     }
 }

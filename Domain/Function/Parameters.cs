@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Domain.Function
 {
@@ -16,5 +17,8 @@ namespace Domain.Function
 
         public float this[int index] =>
             _parameters[index];
+
+        public List<float> ToFloatList() =>
+            _parameters.ToList();
     }
 }
