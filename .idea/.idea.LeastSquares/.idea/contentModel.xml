@@ -64,6 +64,42 @@
         <e p="Test.csproj" t="IncludeRecursive" />
         <e p="UnitTest1.cs" t="Include" />
       </e>
+      <e p="WebApplication" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="HomeController.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="WebApplication.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="Views" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Home" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Shared" t="Include">
+            <e p="_Layout.cshtml" t="Include" />
+          </e>
+        </e>
+        <e p="WebApplication.csproj" t="IncludeRecursive" />
+        <e p="wwwroot" t="Include">
+          <e p="css" t="Include" />
+          <e p="favicon.ico" t="Include" />
+          <e p="js" t="Include" />
+        </e>
+      </e>
     </e>
   </component>
 </project>
