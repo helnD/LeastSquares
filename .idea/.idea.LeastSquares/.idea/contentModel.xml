@@ -65,6 +65,10 @@
         <e p="UnitTest1.cs" t="Include" />
       </e>
       <e p="WebApplication" t="IncludeRecursive">
+        <e p="Adapters" t="Include">
+          <e p="ExperimentalDataAdapter.cs" t="Include" />
+          <e p="NumberOfParametersAdapter.cs" t="Include" />
+        </e>
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
