@@ -1,12 +1,14 @@
-﻿namespace Domain.Function.FunctionView.AnalyticalView
+﻿using System.Collections.Generic;
+
+namespace Domain.Function.FunctionView.AnalyticalView
 {
     public class AnalyticalView : View
     {
-        public AnalyticalView(string value)
+        public AnalyticalView(List<float> parameters)
         {
-            Value = value;
+            Parameters = parameters;
         }
 
-        public string Value { get; }
+        public List<float> Parameters { get; }
     }
 }
