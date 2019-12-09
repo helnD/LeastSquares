@@ -2,6 +2,32 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div>
-    
-</div>
+
+    <form id="chart-form" method="GET">
+            <div id="chart_canvas">
+                <svg class="axis" width="700px" height="350px"></svg>
+            </div>
+            <div id="points_list"></div>
+            <input id="clear" class="btn" type="button" value="Очистить" onclick="clearAll()">
+            <div class="params-items">
+                <label for="number_of_params">Количество параметров:</label>
+                <input id="number_of_params" type="number" min="1" value="1" oninput="changeFunc(this.value)">
+            </div>
+            <div class="func-container">
+                <label>Функция:</label>
+                <div class="func-items">
+                    <div class="item item-0">
+                        <div>f(x)</div>
+                        <div>=</div>
+                        <div class="param">
+                            <div>a</div>
+                            <sub>1</sub>
+                            <div class="value" id="val-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="button" id="clear-func" onclick="clearFunction()">
+            </div>
+            <input id="calc" class="btn" type="button" value="Посчитать" onclick="sendForm()">
+            </form>
+

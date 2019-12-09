@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+.axis path, .axis line {
+  fill: none;
+  stroke: #1b1b1b;
+  stroke-width: 1; }
+
+.axis .grid-line {
+  stroke: #1b1b1b;
+  stroke-opacity: 0.2; }
+
+.axis text {
+  font: 8pt 'Verdana';
+  stroke: #1b1b1b;
+  stroke-width: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.dot {
+  stroke: #1b1b1b; }
