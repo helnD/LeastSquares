@@ -4,12 +4,12 @@ namespace Domain.LES
 {
     public class EquationResult : ICloneable
     {
-        public EquationResult(float value)
+        public EquationResult(double value)
         {
             Value = value;
         }
 
-        public float Value { get; }
+        public double Value { get; }
         public int Number { get; }
         
         public object Clone()

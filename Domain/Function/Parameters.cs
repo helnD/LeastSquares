@@ -5,9 +5,9 @@ namespace Domain.Function
 {
     public class Parameters
     {
-        private readonly List<float> _parameters;
+        private readonly List<double> _parameters;
 
-        public Parameters(List<float> parameters)
+        public Parameters(List<double> parameters)
         {
             _parameters = parameters;
             Count = parameters.Count;
@@ -15,10 +15,10 @@ namespace Domain.Function
         
         public int Count { get; }
 
-        public float this[int index] =>
+        public double this[int index] =>
             _parameters[index];
 
-        public List<float> ToFloatList() =>
+        public List<double> ToFloatList() =>
             _parameters.ToList();
     }
 }

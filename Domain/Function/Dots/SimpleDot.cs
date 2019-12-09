@@ -2,13 +2,13 @@
 {
     public class SimpleDot : IDot
     {
-        public SimpleDot(float x, float y)
+        public SimpleDot(double x, double y)
         {
             X = x;
             Y = y;
         }
 
-        public float X { get; }
-        public float Y { get; }
+        public double X { get; }
+        public double Y { get; }
     }
 }

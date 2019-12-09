@@ -6,18 +6,18 @@ namespace Domain.Function
 {
     public class Function
     {
-        private readonly Func<float, float> _function;
+        private readonly Func<double, double> _function;
 
-        public Function(List<float> parameters)
+        public Function(List<double> parameters)
         {
             Parameters = new Parameters(parameters);
             
-            _function = x => (float)parameters.Select((p, i) => p * Math.Pow(x, i)).Sum(); 
+            _function = x => parameters.Select((p, i) => p * Math.Pow(x, i)).Sum(); 
         }
         
         public Parameters Parameters { get; }
 
-        public float Value(float argument) =>
+        public double Value(double argument) =>
             _function(argument);
     }
 }

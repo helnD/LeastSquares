@@ -9,7 +9,7 @@ namespace Domain.LES
         private readonly List<Term> _terms;
         private readonly EquationResult _result;
 
-        public LinearEquation(float result, params float[] terms)
+        public LinearEquation(double result, params double[] terms)
         {
             Count = terms.Length;
             _result = new EquationResult(result);
@@ -21,11 +21,11 @@ namespace Domain.LES
         
         public int Count { get; }
 
-        public float Result => _result.Value;
+        public double Result => _result.Value;
 
         public LinearEquation Plus(LinearEquation equation)
         {
-            var terms = new float[this.Count];
+            var terms = new double[this.Count];
 
             for (int index = 0; index < this.Count; index++)
             {
@@ -36,9 +36,9 @@ namespace Domain.LES
             return new LinearEquation(result, terms);
         }
 
-        public LinearEquation Multiply(float number)
+        public LinearEquation Multiply(double number)
         {
-            var terms = new float[this.Count];
+            var terms = new double[this.Count];
 
             for (int index = 0; index < this.Count; index++)
             {
@@ -50,7 +50,7 @@ namespace Domain.LES
             return new LinearEquation(result, terms);
         }
         
-        public float this[int index] => _terms[index].Coefficient;
+        public double this[int index] => _terms[index].Coefficient;
         
         public object Clone()
         {

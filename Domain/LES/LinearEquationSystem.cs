@@ -18,11 +18,11 @@ namespace Domain.LES
         public Solution Solution()
         {
             LinearEquationSystem stepMatrix = StepMatrix(this);
-            var solutions = new List<float>();
+            var solutions = new List<double>();
             
             for (var i = stepMatrix._count - 1; i >= 0; i--)
             {
-                var subtrahend = 0.0f;
+                var subtrahend = 0.0;
                 for (var j = i + 1; j < stepMatrix._count; j++)
                 {
                     subtrahend += stepMatrix[i][j] * solutions[^(j - i)];
@@ -59,7 +59,7 @@ namespace Domain.LES
             for (var i = 0; ; i++)
             {
                 var firstElement = result[i][i];
-                var newRow = result[i].Multiply(1.0f / firstElement);
+                var newRow = result[i].Multiply(1.0 / firstElement);
 
                 result = result.ReplaceRow(i, newRow);
                 

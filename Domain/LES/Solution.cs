@@ -6,16 +6,16 @@ namespace Domain.LES
 {
     public class Solution
     {
-        private readonly List<float> _result;
+        private readonly List<double> _result;
 
-        public Solution(List<float> result)
+        public Solution(List<double> result)
         {
             _result = result;
         }
 
-        public float this[int index] => _result[index];
+        public double this[int index] => _result[index];
 
-        public List<float> ToList() =>
+        public List<double> ToList() =>
             _result.Select(it => it).ToList();
     }
 }

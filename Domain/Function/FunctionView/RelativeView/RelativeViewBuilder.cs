@@ -6,28 +6,28 @@ namespace Domain.Function.FunctionView.RelativeView
     public class RelativeViewBuilder : IViewBuilder
     {
         private readonly Function _function;
-        private float _numberOfParts = 50;
-        private float _start = 0;
-        private float _end = 100;
+        private double _numberOfParts = 50;
+        private double _start = 0;
+        private double _end = 100;
 
         public RelativeViewBuilder(Function function)
         {
             _function = function;
         }
 
-        public RelativeViewBuilder NumberOfParts(float number)
+        public RelativeViewBuilder NumberOfParts(double number)
         {
             _numberOfParts = number;
             return this;
         }
 
-        public RelativeViewBuilder Start(float start)
+        public RelativeViewBuilder Start(double start)
         {
             _start = start;
             return this;
         }
 
-        public RelativeViewBuilder End(float end)
+        public RelativeViewBuilder End(double end)
         {
             _end = end;
             return this;

@@ -4,13 +4,13 @@ namespace Domain.LES
 {
     public class Term : ICloneable
     {
-        public Term(float coefficient, int number)
+        public Term(double coefficient, int number)
         {
             Number = number;
             Coefficient = coefficient;
         }
 
-        public float Coefficient { get; }
+        public double Coefficient { get; }
         public int Number { get; }
         
         public object Clone()

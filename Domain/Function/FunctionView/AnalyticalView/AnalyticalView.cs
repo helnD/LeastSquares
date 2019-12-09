@@ -4,11 +4,11 @@ namespace Domain.Function.FunctionView.AnalyticalView
 {
     public class AnalyticalView : View
     {
-        public AnalyticalView(List<float> parameters)
+        public AnalyticalView(List<double> parameters)
         {
             Parameters = parameters;
         }
 
-        public List<float> Parameters { get; }
+        public List<double> Parameters { get; }
     }
 }

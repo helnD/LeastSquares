@@ -2,7 +2,7 @@
 {
     public interface IDot
     {
-        float X { get; }
-        float Y { get; }
+        double X { get; }
+        double Y { get; }
     }
 }
